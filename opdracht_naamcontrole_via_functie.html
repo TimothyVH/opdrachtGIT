@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	
+	<script type="text/javascript">
+	"use strict";
+	
+	//Controle functie
+	function controle (input) {
+		if (input == null) {
+			document.write("U heeft geannuleerd!");
+			return false;
+		}
+
+		else if (input.length == 0) {
+			document.write("U heeft niets ingegeven!");
+			return false;
+		}
+
+		else if (input.length < 2) {
+			document.write("Geef minimaal 2 tekens in!");
+			return false;
+		}
+
+		else {
+			return `${input.charAt(0).toUpperCase() + input.substring(1)}`;
+		}
+	}
+
+
+	//Voornaam
+	let input = prompt("Wat is je voornaam?");
+	let voornaam_controle = controle(input);
+
+
+	if (voornaam_controle != false) {
+		//Achternaam
+		let input2 = prompt("Wat is je achternaam?");
+		let achternaam_controle = controle(input2);
+
+		//Output
+		if (achternaam_controle != false) {
+		document.write(`<p>Hey, ${voornaam_controle} ${achternaam_controle}!</p>`);
+		}
+
+		else {
+			document.write(`${achternaam_controle}`);
+		}
+
+	}
+
+	else {
+		document.write("Voer uw voornaam opnieuw in!");
+	}		
+
+
+</script>
+
+</body>
+</html>

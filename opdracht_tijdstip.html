@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		let vandaag = new Date();
+		let tijdstip = vandaag.getHours();
+
+
+		if (tijdstip > 0 && tijdstip <= 7) {
+			document.write(`<p>Het is nu ${tijdstip} uur.</p><p>Goeienacht!</p>`);
+		}
+		else if (tijdstip > 7 && tijdstip <= 11) {
+			document.write(`<p>Het is nu ${tijdstip} uur.</p><p>Goeiemorgen!</p>`);
+		}
+		else if (tijdstip > 11 && tijdstip <= 18) {
+			document.write(`<p>Het is nu ${tijdstip} uur.</p><p>Goeiemiddag!</p>`);
+		}
+		else if (tijdstip > 18 && tijdstip <= 24) {
+			document.write(`<p>Het is nu ${tijdstip} uur.</p><p>Goeie avond!</p>`);
+		}
+		else {
+			document.write("<p>Er is een fout opgetreden. Controleer de klok van uw apparaat!</p>");
+		}
+	</script>
+
+
+</body>
+</html>
